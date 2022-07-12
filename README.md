@@ -24,6 +24,6 @@ This project is made so all the elements are displayed correctly on popular scre
 
 **Github Pages**
 
-- [Check out the Website]
+- [Check out the Website] (https://mcdevs365.github.io/se_project_aroundtheus/)
 
 Good luck and have fun!
