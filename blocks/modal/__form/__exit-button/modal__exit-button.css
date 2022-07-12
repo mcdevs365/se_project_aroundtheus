@@ -1,0 +1,19 @@
+.modal__form__exit-button {
+  border: none;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  background: transparent;
+  padding: 0;
+}
+
+@media screen and (max-width: 680px) {
+  .modal__form__exit-button {
+    width: 26px;
+    margin: 0;
+    top: -40px;
+    right: 0;
+  }
+}

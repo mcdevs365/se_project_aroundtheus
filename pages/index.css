@@ -1,0 +1,14 @@
+@import url(../vendor/normalize.css);
+
+/*Page*/
+@import url(../blocks/page/page.css);
+
+/*Modal*/
+@import url(../blocks/modal/modal.css);
+@import url(../blocks/modal/__container/modal__container.css);
+@import url(../blocks/modal/__form/modal__form.css);
+@import url(../blocks/modal/__form/__title/modal__form__title.css);
+@import url(../blocks/modal/__form/__exit-button/modal__exit-button.css);
+@import url(../blocks/modal/__form/__exit-icon/modal__form__exit-icon.css);
+@import url(../blocks/modal/__form/__input/modal__form__input.css);
+@import url(../blocks/modal/__form/__button/modal__form__button.css);
