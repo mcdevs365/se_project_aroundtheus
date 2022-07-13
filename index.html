@@ -8,7 +8,33 @@
     <link rel="stylesheet" href="./pages/index.css" />
   </head>
   <body class="page">
-    <div class="modal__opened">
+    <header class="header">
+      <img
+        alt="Around The US logo"
+        src="./images/AroundtheUS.svg"
+        class="header__logo"
+      />
+    </header>
+    <main class="content">
+      <section class="profile">
+        <img
+          alt="headshot picture"
+          src="./images/jacques-cousteau.png"
+          class="profile__image"
+        />
+        <div class="profile__info">
+          <h1 class="profile__title">Jacques Cousteau</h1>
+          <button
+            type="button"
+            id="openModal"
+            class="profile__edit-button"
+          ></button>
+          <p class="profile__description">Explorer</p>
+        </div>
+      </section>
+    </main>
+
+    <div class="modal">
       <div class="modal__container">
         <form class="modal__form">
           <h3 class="modal__form__title">Edit profile</h3>
