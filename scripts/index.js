@@ -39,3 +39,41 @@ function closeModal() {
 
 editButton.addEventListener("click", openModal);
 closeButton.addEventListener("click", closeModal);
+
+const profileFormElement = document.querySelector(".modal__form");
+
+const nameInput = document.querySelector("#nameInput");
+const jobInput = document.querySelector("#descriptionInput");
+
+const profileName = document.querySelector(".profile__title");
+const profileJob = document.querySelector(".profile__description");
+
+function handleProfileFormSubmit(evt) {
+  evt.preventDefault();
+  profileName.textContent = nameInput.value;
+  profileJob.textContent = jobInput.value;
+  closeModal();
+}
+
+profileFormElement.addEventListener("submit", handleProfileFormSubmit);
+
+const cardsTemplate =
+  document.querySelector("#cardsTemplate").content.firstElementChild;
+
+const cardsList = document.querySelector(".cards__list");
+
+initialCards.forEach(function getCardsElement(data) {
+  const cardsElement = cardsTemplate.cloneNode(true);
+  const cardsElementImage = cardsElement.querySelector(
+    ".cards__element__image"
+  );
+  const cardsElementTitle = cardsElement.querySelector(
+    ".cards__element__title"
+  );
+
+  cardsElementImage.src = data.link;
+  cardsElementImage.alt = data.name;
+  cardsElementTitle.textContent = data.name;
+
+  cardsList.appendChild(cardsElement);
+});

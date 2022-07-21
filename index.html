@@ -35,11 +35,14 @@
       </section>
       <section class="cards">
         <ul class="cards__list">
-          <template id="cardTemplate">
-            <li class="card">
-              <img alt="" class="card__image" src="" />
-              <h2 class="card__title"></h2>
-              <button type="button" class="card__like-button"></button>
+          <template id="cardsTemplate">
+            <li class="cards__element">
+              <img alt="" class="cards__element__image" src="" />
+              <h2 class="cards__element__title"></h2>
+              <button
+                type="button"
+                class="cards__element__like-button"
+              ></button>
             </li>
           </template>
         </ul>
@@ -63,6 +66,7 @@
           </button>
           <input
             type="text"
+            id="nameInput"
             class="modal__form__input"
             name="name"
             placeholder="Jacques Cousteau"
@@ -70,6 +74,7 @@
           />
           <input
             type="text"
+            id="descriptionInput"
             class="modal__form__input"
             name="description"
             placeholder="Explorer"
