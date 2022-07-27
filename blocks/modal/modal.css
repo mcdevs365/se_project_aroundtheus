@@ -10,6 +10,6 @@
   justify-content: center;
 }
 
-.modal__opened {
+.modal_opened {
   display: flex;
 }

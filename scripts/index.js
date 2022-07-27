@@ -30,11 +30,11 @@ const editButton = document.querySelector("#openModal");
 const closeButton = document.querySelector("#closeModal");
 
 function openModal() {
-  modal.classList.add("modal__opened");
+  modal.classList.add("modal_opened");
 }
 
 function closeModal() {
-  modal.classList.remove("modal__opened");
+  modal.classList.remove("modal_opened");
 }
 
 editButton.addEventListener("click", openModal);
@@ -64,12 +64,8 @@ const cardsList = document.querySelector(".cards__list");
 
 initialCards.forEach(function getCardsElement(data) {
   const cardsElement = cardsTemplate.cloneNode(true);
-  const cardsElementImage = cardsElement.querySelector(
-    ".cards__element__image"
-  );
-  const cardsElementTitle = cardsElement.querySelector(
-    ".cards__element__title"
-  );
+  const cardsElementImage = cardsElement.querySelector(".card__image");
+  const cardsElementTitle = cardsElement.querySelector(".card__title");
 
   cardsElementImage.src = data.link;
   cardsElementImage.alt = data.name;

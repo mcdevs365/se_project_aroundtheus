@@ -10,9 +10,6 @@
 
 @media screen and (max-width: 680px) {
   .profile__info {
-    grid-template-areas:
-      "name button"
-      "title .";
     grid-template-rows: repeat(2, 22px);
     column-gap: 10px;
     row-gap: 14px;

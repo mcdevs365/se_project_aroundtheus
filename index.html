@@ -36,13 +36,10 @@
       <section class="cards">
         <ul class="cards__list">
           <template id="cardsTemplate">
-            <li class="cards__element">
-              <img alt="" class="cards__element__image" src="" />
-              <h2 class="cards__element__title"></h2>
-              <button
-                type="button"
-                class="cards__element__like-button"
-              ></button>
+            <li class="card">
+              <img alt="" class="card__image" src="" />
+              <h2 class="card__title"></h2>
+              <button type="button" class="card__like-button"></button>
             </li>
           </template>
         </ul>
@@ -53,7 +50,7 @@
     </footer>
     <div class="modal">
       <div class="modal__container">
-        <form class="modal__form">
+        <form class="modal__form" name="modal__form">
           <h3 class="modal__form__title">Edit profile</h3>
           <button
             type="button"

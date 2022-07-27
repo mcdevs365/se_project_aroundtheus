@@ -9,12 +9,12 @@
 
 @media screen and (max-width: 950px) {
   .page {
-    max-width: 660px;
+    width: 100%;
   }
 }
 
 @media only screen and (max-width: 680px) {
   .page {
-    max-width: 320px;
+    width: 100%;
   }
 }
