@@ -59,7 +59,7 @@ function createCard(data) {
   const cardsElementImage = cardsElement.querySelector(".card__image");
   const cardsElementTitle = cardsElement.querySelector(".card__title");
   const likeButton = cardsElement.querySelector(".card__like-button");
-
+  const deleteButton = cardsElement.querySelector(".card__delete-button");
   cardsElementImage.src = data.link;
   cardsElementImage.alt = data.name;
   cardsElementTitle.textContent = data.name;
@@ -67,6 +67,12 @@ function createCard(data) {
     "click",
     (handleLikeButton = (evt) => {
       evt.target.classList.toggle("card__like-button_is-active");
+    })
+  );
+  deleteButton.addEventListener(
+    "click",
+    (handleDeleteCard = (evt) => {
+      evt.target.closest(".card").remove();
     })
   );
 
@@ -112,11 +118,11 @@ cardsFormElement.addEventListener(
     evt.preventDefault();
     const title = evt.target.title.value;
     const link = evt.target.link.value;
-    const createCardsElement = createCard({
+    const createCardElement = createCard({
       name: title,
       link: link,
     });
-    cardsList.prepend(createCardsElement);
+    cardsList.prepend(createCardElement);
     closeModal(addModal);
     cardsFormElement.reset();
   })

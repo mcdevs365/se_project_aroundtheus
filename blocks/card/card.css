@@ -1,4 +1,4 @@
-.card {
+/* .card {
   width: 282px;
   background: #fff;
   border-radius: 10px;
@@ -6,4 +6,12 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+} */
+
+.card {
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  width: 282px;
+  list-style: none;
 }

@@ -1,0 +1,7 @@
+.card_description {
+  width: 282px;
+  background: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
