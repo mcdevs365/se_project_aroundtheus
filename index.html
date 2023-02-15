@@ -26,12 +26,16 @@
           <h1 class="profile__title">Jacques Cousteau</h1>
           <button
             type="button"
-            id="openModal"
+            id="openEditModal"
             class="profile__edit-button"
           ></button>
           <p class="profile__description">Explorer</p>
         </div>
-        <button type="button" class="profile__add-button"></button>
+        <button
+          type="button"
+          class="profile__add-button"
+          id="openAddModal"
+        ></button>
       </section>
       <section class="cards">
         <ul class="cards__list">
@@ -48,13 +52,13 @@
     <footer class="footer">
       <p class="footer__copyright">&copy; Around the U.S. 2022</p>
     </footer>
-    <div class="modal">
+    <div class="modal" id="edit-modal">
       <div class="modal__container">
-        <form class="modal__form" name="modal__form">
+        <form class="modal__form" name="edit-modal__form">
           <h3 class="modal__form__title">Edit profile</h3>
           <button
             type="button"
-            id="closeModal"
+            id="closeEditModal"
             class="modal__form__exit-button"
           >
             <img
@@ -77,6 +81,41 @@
             class="modal__form__input"
             name="description"
             placeholder="Description"
+            required
+          />
+          <button type="submit" class="modal__form__button">Save</button>
+        </form>
+      </div>
+    </div>
+    <div class="modal" id="add-modal">
+      <div class="modal__container">
+        <form class="modal__form" name="add-modal__form">
+          <h3 class="modal__form__title">New Place</h3>
+          <button
+            type="button"
+            id="closeAddModal"
+            class="modal__form__exit-button"
+          >
+            <img
+              class="modal__form__exit-icon"
+              src="./images/close-icon.svg"
+              alt="exit button"
+            />
+          </button>
+          <input
+            type="text"
+            id="nameInput"
+            class="modal__form__input"
+            name="title"
+            placeholder="Title"
+            required
+          />
+          <input
+            type="text"
+            id="descriptionInput"
+            class="modal__form__input"
+            name="link"
+            placeholder="Image Link"
             required
           />
           <button type="submit" class="modal__form__button">Save</button>
