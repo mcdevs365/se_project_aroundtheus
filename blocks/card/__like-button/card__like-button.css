@@ -13,3 +13,15 @@
   opacity: 0.5;
   cursor: pointer;
 }
+
+.card__like-button_is-active {
+  margin-right: 30px;
+  background-image: url(../../../images/likebutton-active.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  min-width: 21px;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  transition: opacity 0.2s linear;
+}

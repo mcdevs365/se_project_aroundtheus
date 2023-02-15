@@ -58,12 +58,19 @@ function createCard(data) {
   const cardsElement = cardsTemplate.cloneNode(true);
   const cardsElementImage = cardsElement.querySelector(".card__image");
   const cardsElementTitle = cardsElement.querySelector(".card__title");
+  const likeButton = cardsElement.querySelector(".card__like-button");
 
   cardsElementImage.src = data.link;
   cardsElementImage.alt = data.name;
   cardsElementTitle.textContent = data.name;
+  likeButton.addEventListener(
+    "click",
+    (handleLikeButton = (evt) => {
+      evt.target.classList.toggle("card__like-button_is-active");
+    })
+  );
 
-  cardsList.prepend(cardsElement);
+  return cardsElement;
 }
 
 function openModal(modal) {
@@ -105,14 +112,16 @@ cardsFormElement.addEventListener(
     evt.preventDefault();
     const title = evt.target.title.value;
     const link = evt.target.link.value;
-    createCard({
+    const createCardsElement = createCard({
       name: title,
       link: link,
     });
+    cardsList.prepend(createCardsElement);
     closeModal(addModal);
+    cardsFormElement.reset();
   })
 );
 
 initialCards.forEach(function (data) {
-  createCard(data);
+  cardsList.prepend(createCard(data));
 });
