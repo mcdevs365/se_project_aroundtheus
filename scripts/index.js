@@ -54,6 +54,24 @@ const cardsTemplate =
 
 const cardsList = document.querySelector(".cards__list");
 
+const cardPreviewImage = document.querySelector(".modal__preview__image");
+
+const cardPreviewCaption = document.querySelector(".modal__preview__caption");
+
+const cardPreviewModal = document.querySelector("#preview-modal");
+
+const cardPreviewCloseButton = cardPreviewModal.querySelector(
+  ".modal__preview__exit-button"
+);
+
+function openModal(modal) {
+  modal.classList.add("modal_opened");
+}
+
+function closeModal(modal) {
+  modal.classList.remove("modal_opened");
+}
+
 function createCard(data) {
   const cardsElement = cardsTemplate.cloneNode(true);
   const cardsElementImage = cardsElement.querySelector(".card__image");
@@ -76,15 +94,21 @@ function createCard(data) {
     })
   );
 
+  cardsElementImage.addEventListener(
+    "click",
+    (handlePreviewPicture = () => {
+      cardPreviewImage.src = data.link;
+      cardPreviewImage.alt = data.name;
+      cardPreviewCaption.textContent = data.name;
+      openModal(cardPreviewModal);
+    })
+  );
+
+  cardPreviewCloseButton.addEventListener("click", () =>
+    closeModal(cardPreviewModal)
+  );
+
   return cardsElement;
-}
-
-function openModal(modal) {
-  modal.classList.add("modal_opened");
-}
-
-function closeModal(modal) {
-  modal.classList.remove("modal_opened");
 }
 
 editButton.addEventListener("click", () => {

@@ -1,0 +1,21 @@
+.modal__preview__exit-button {
+  position: absolute;
+  margin-bottom: 370px;
+  margin-left: 465px;
+  background-color: transparent;
+  background-image: url(../../../../images/close-icon.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 40px;
+  height: 40px;
+  border: none;
+  top: -40px;
+  right: -40px;
+  margin: 0;
+  padding: 0;
+}
+
+.modal__preview__exit-button:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}

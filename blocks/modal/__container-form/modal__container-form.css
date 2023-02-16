@@ -1,4 +1,4 @@
-.modal__container {
+.modal__container-form {
   width: 430px;
   background-color: #ffffff;
   position: relative;
@@ -8,7 +8,7 @@
 }
 
 @media screen and (max-width: 680px) {
-  .modal__container {
+  .modal__container-form {
     width: 282px;
   }
 }
