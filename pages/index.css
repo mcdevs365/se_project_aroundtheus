@@ -40,7 +40,7 @@
 @import url(../blocks/modal/modal.css);
 
 /*Form Modal*/
-@import url(../blocks/modal/__container-form/modal__container-form.css);
+@import url(../blocks/modal/__container/modal__container.css);
 @import url(../blocks/modal/__form/modal__form.css);
 @import url(../blocks/modal/__form/__title/modal__form__title.css);
 @import url(../blocks/modal/__form/__exit-button/modal__exit-button.css);
@@ -49,7 +49,7 @@
 @import url(../blocks/modal/__form/__button/modal__form__button.css);
 
 /*Preview Modal*/
-@import url(../blocks/modal/__container-preview/modal__container-preview.css);
+@import url(../blocks/modal/__wrapper/modal__wrapper.css);
 @import url(../blocks/modal/__preview/modal__preview.css);
 @import url(../blocks/modal/__preview/__image/modal__preview-image.css);
 @import url(../blocks/modal/__preview/__caption/modal__preview-caption.css);
