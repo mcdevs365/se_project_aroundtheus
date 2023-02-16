@@ -1,0 +1,14 @@
+.form {
+  width: 430px;
+  background-color: #ffffff;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
+  z-index: 2;
+}
+
+@media screen and (max-width: 680px) {
+  .form {
+    width: 282px;
+  }
+}

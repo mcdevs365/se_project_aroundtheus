@@ -1,0 +1,15 @@
+.form__exit-icon {
+  width: 40px;
+}
+
+.form__exit-icon:hover {
+  opacity: 0.6;
+}
+
+@media screen and (max-width: 680px) {
+  .form__exit-icon {
+    width: 26px;
+    font-size: 14px;
+    line-height: 17px;
+  }
+}

@@ -25,9 +25,9 @@ const initialCards = [
   },
 ];
 
-const editModal = document.querySelector("#edit-modal");
+const editModal = document.querySelector("#editModal");
 
-const addModal = document.querySelector("#add-modal");
+const addModal = document.querySelector("#addModal");
 
 const editButton = document.querySelector("#openEditModal");
 
@@ -41,9 +41,9 @@ const nameInput = document.querySelector("#nameInput");
 
 const jobInput = document.querySelector("#descriptionInput");
 
-const profileFormElement = document.querySelector('[name="edit-modal__form"]');
+const profileFormElement = document.querySelector('[name="editForm"]');
 
-const cardsFormElement = document.querySelector('[name="add-modal__form"]');
+const cardsFormElement = document.querySelector('[name="addForm"]');
 
 const profileName = document.querySelector(".profile__title");
 
@@ -54,14 +54,14 @@ const cardsTemplate =
 
 const cardsList = document.querySelector(".cards__list");
 
-const cardPreviewImage = document.querySelector(".modal__preview__image");
+const cardPreviewImage = document.querySelector(".preview__image");
 
-const cardPreviewCaption = document.querySelector(".modal__preview__caption");
+const cardPreviewCaption = document.querySelector(".preview__caption");
 
-const cardPreviewModal = document.querySelector("#preview-modal");
+const cardPreviewModal = document.querySelector("#previewModal");
 
 const cardPreviewCloseButton = cardPreviewModal.querySelector(
-  ".modal__preview__exit-button"
+  ".preview__exit-button"
 );
 
 function openModal(modal) {
@@ -74,23 +74,23 @@ function closeModal(modal) {
 
 function createCard(data) {
   const cardsElement = cardsTemplate.cloneNode(true);
-  const cardsElementImage = cardsElement.querySelector(".card__image");
-  const cardsElementTitle = cardsElement.querySelector(".card__title");
-  const likeButton = cardsElement.querySelector(".card__like-button");
-  const deleteButton = cardsElement.querySelector(".card__delete-button");
+  const cardsElementImage = cardsElement.querySelector(".cards__image");
+  const cardsElementTitle = cardsElement.querySelector(".cards__title");
+  const likeButton = cardsElement.querySelector(".cards__like-button");
+  const deleteButton = cardsElement.querySelector(".cards__delete-button");
   cardsElementImage.src = data.link;
   cardsElementImage.alt = data.name;
   cardsElementTitle.textContent = data.name;
   likeButton.addEventListener(
     "click",
     (handleLikeButton = (evt) => {
-      evt.target.classList.toggle("card__like-button_is-active");
+      evt.target.classList.toggle("cards__like-button_is-active");
     })
   );
   deleteButton.addEventListener(
     "click",
     (handleDeleteCard = (evt) => {
-      evt.target.closest(".card").remove();
+      evt.target.closest(".cards__element").remove();
     })
   );
 

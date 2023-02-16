@@ -40,12 +40,12 @@
       <section class="cards">
         <ul class="cards__list">
           <template id="cardsTemplate">
-            <li class="card">
-              <img alt="" class="card__image" src=" " />
-              <button type="button" class="card__delete-button"></button>
-              <div class="card_description">
-                <h2 class="card__title"></h2>
-                <button type="button" class="card__like-button"></button>
+            <li class="cards__element">
+              <img alt="" class="cards__image" src=" " />
+              <button type="button" class="cards__delete-button"></button>
+              <div class="cards_description">
+                <h2 class="cards__title"></h2>
+                <button type="button" class="cards__like-button"></button>
               </div>
             </li>
           </template>
@@ -55,17 +55,13 @@
     <footer class="footer">
       <p class="footer__copyright">&copy; Around the U.S. 2022</p>
     </footer>
-    <div class="modal" id="edit-modal">
-      <div class="modal__container">
-        <form class="modal__form" name="edit-modal__form">
-          <h3 class="modal__form__title">Edit profile</h3>
-          <button
-            type="button"
-            id="closeEditModal"
-            class="modal__form__exit-button"
-          >
+    <div class="modal" id="editModal">
+      <div class="form">
+        <form class="form__container" name="editForm">
+          <h3 class="form__title">Edit profile</h3>
+          <button type="button" id="closeEditModal" class="form__exit-button">
             <img
-              class="modal__form__exit-icon"
+              class="form__exit-icon"
               src="./images/close-icon.svg"
               alt="exit button"
             />
@@ -73,7 +69,7 @@
           <input
             type="text"
             id="nameInput"
-            class="modal__form__input"
+            class="form__input"
             name="name"
             placeholder="Name"
             required
@@ -81,26 +77,22 @@
           <input
             type="text"
             id="descriptionInput"
-            class="modal__form__input"
+            class="form__input"
             name="description"
             placeholder="Description"
             required
           />
-          <button type="submit" class="modal__form__button">Save</button>
+          <button type="submit" class="form__submit-button">Save</button>
         </form>
       </div>
     </div>
-    <div class="modal" id="add-modal">
-      <div class="modal__container">
-        <form class="modal__form" name="add-modal__form">
-          <h3 class="modal__form__title">New Place</h3>
-          <button
-            type="button"
-            id="closeAddModal"
-            class="modal__form__exit-button"
-          >
+    <div class="modal" id="addModal">
+      <div class="form">
+        <form class="form__container" name="addForm">
+          <h3 class="form__title">New Place</h3>
+          <button type="button" id="closeAddModal" class="form__exit-button">
             <img
-              class="modal__form__exit-icon"
+              class="form__exit-icon"
               src="./images/close-icon.svg"
               alt="exit button"
             />
@@ -108,7 +100,7 @@
           <input
             type="text"
             id="titleInput"
-            class="modal__form__input"
+            class="form__input"
             name="title"
             placeholder="Title"
             required
@@ -116,25 +108,25 @@
           <input
             type="text"
             id="linkInput"
-            class="modal__form__input"
+            class="form__input"
             name="link"
             placeholder="Image Link"
             required
           />
-          <button type="submit" class="modal__form__button">Save</button>
+          <button type="submit" class="form__submit-button">Save</button>
         </form>
       </div>
     </div>
-    <div class="modal" id="preview-modal">
-      <div class="modal__wrapper">
-        <div class="modal__preview">
+    <div class="modal" id="previewModal">
+      <div class="preview">
+        <div class="preview__container">
           <button
             type="button"
-            class="modal__preview__exit-button"
+            class="preview__exit-button"
             id="closePreviewModal"
           ></button>
-          <img class="modal__preview__image" alt="" src=" " />
-          <p class="modal__preview__caption"></p>
+          <img class="preview__image" alt="" src=" " />
+          <p class="preview__caption"></p>
         </div>
       </div>
     </div>
