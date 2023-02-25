@@ -3,7 +3,13 @@
   border-bottom: 1px solid rgba(84, 84, 84, 0.7);
 }
 
-@media screen and (max-width: 680px) {
+@media screen and (min-width: 321px) and (max-width: 580px) {
+  .header {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 320px) {
   .header {
     margin: 0;
   }

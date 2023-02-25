@@ -26,7 +26,7 @@
           <h1 class="profile__title">Jacques Cousteau</h1>
           <button
             type="button"
-            id="openEditModal"
+            id="openEditProfileModal"
             class="profile__edit-button"
           ></button>
           <p class="profile__description">Explorer</p>
@@ -34,7 +34,7 @@
         <button
           type="button"
           class="profile__add-button"
-          id="openAddModal"
+          id="openAddCardModal"
         ></button>
       </section>
       <section class="cards">
@@ -55,11 +55,15 @@
     <footer class="footer">
       <p class="footer__copyright">&copy; Around the U.S. 2022</p>
     </footer>
-    <div class="modal" id="editModal">
+    <div class="modal" id="editProfileModal">
       <div class="form">
-        <form class="form__container" name="editForm">
+        <form class="form__container" name="editProfileForm">
           <h3 class="form__title">Edit profile</h3>
-          <button type="button" id="closeEditModal" class="form__exit-button">
+          <button
+            type="button"
+            id="closeEditProfileModal"
+            class="form__exit-button"
+          >
             <img
               class="form__exit-icon"
               src="./images/close-icon.svg"
@@ -68,7 +72,7 @@
           </button>
           <input
             type="text"
-            id="nameInput"
+            id="profileNameInput"
             class="form__input"
             name="name"
             placeholder="Name"
@@ -76,7 +80,7 @@
           />
           <input
             type="text"
-            id="descriptionInput"
+            id="profileDescriptionInput"
             class="form__input"
             name="description"
             placeholder="Description"
@@ -86,11 +90,15 @@
         </form>
       </div>
     </div>
-    <div class="modal" id="addModal">
+    <div class="modal" id="addCardModal">
       <div class="form">
-        <form class="form__container" name="addForm">
+        <form class="form__container" name="addCardForm">
           <h3 class="form__title">New Place</h3>
-          <button type="button" id="closeAddModal" class="form__exit-button">
+          <button
+            type="button"
+            id="closeAddCardModal"
+            class="form__exit-button"
+          >
             <img
               class="form__exit-icon"
               src="./images/close-icon.svg"
@@ -99,7 +107,7 @@
           </button>
           <input
             type="text"
-            id="titleInput"
+            id="cardTitleInput"
             class="form__input"
             name="title"
             placeholder="Title"
@@ -107,7 +115,7 @@
           />
           <input
             type="text"
-            id="linkInput"
+            id="cardLinkInput"
             class="form__input"
             name="link"
             placeholder="Image Link"
@@ -130,6 +138,6 @@
         </div>
       </div>
     </div>
-    <script src="scripts/index.js"></script>
+    <script src="scripts/index.js" defer></script>
   </body>
 </html>

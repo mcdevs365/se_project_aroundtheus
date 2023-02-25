@@ -6,15 +6,3 @@
   max-width: 880px;
   margin: 0 auto;
 }
-
-@media screen and (max-width: 950px) {
-  .page {
-    width: 100%;
-  }
-}
-
-@media only screen and (max-width: 680px) {
-  .page {
-    width: 100%;
-  }
-}

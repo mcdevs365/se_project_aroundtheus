@@ -3,15 +3,32 @@
   grid-template-areas:
     "name button"
     "title .";
-  grid-template-rows: minmax(auto, 45px);
-  gap: 16px 18px;
   align-items: center;
 }
 
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 880px) {
   .profile__info {
-    grid-template-rows: repeat(2, 22px);
-    column-gap: 10px;
-    row-gap: 14px;
+    margin-top: 15px;
+    grid-template-columns: 235px 55px;
+  }
+}
+
+@media screen and (max-width: 628px) {
+  .profile__info {
+    grid-template-columns: 200px 70px;
+  }
+}
+
+@media screen and (min-width: 321px) and (max-width: 580px) {
+  .profile__info {
+    justify-content: center;
+    grid-template-columns: 275px 50px;
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .profile__info {
+    grid-template-columns: 275px 40px;
   }
 }
